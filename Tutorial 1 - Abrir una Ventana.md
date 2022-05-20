@@ -11,11 +11,13 @@ Esta funcion inicializa GLUT. Los parametros pueden ser previstos directamente d
 `glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);`
 
 Aquí configuramos algunas opciones de GLUT. GLUT_DOUBLE permite el doble buffer (dibuja en un búfer en segundo plano mientras se visualiza otro buffer) y el buffer de color donde la mayor representación termina (es decir, la pantalla). Por lo general vamos a querer estos dos, así como otras opciones que veremos más adelante.  
- 
-`glutInitWindowSize(1024, 768);`
-`glutInitWindowPosition(100, 100);` 
-`glutCreateWindow("Tutorial 01");` 
- 
+
+```
+glutInitWindowSize(1024, 768);
+glutInitWindowPosition(100, 100);
+glutCreateWindow("Tutorial 01");
+```
+
 Estas llamadas especifican los parámetros de la ventana y la crean. Usted también tiene la opción de especificar el título de la ventana.  
  
 `glutDisplayFunc(RenderSceneCB);` 
@@ -30,7 +32,9 @@ Este es nuestro primer encuentro con el concepto de estado en OpenGL. La idea de
 
 Esta llamada le otorga el control a GLUT que ahora comienza su propio bucle interno. En este bucle se escucha a los eventos del sistema de ventanas y los pasa a través de las devoluciones de llamada (callback) que hemos configurado. En nuestro caso GLUT sólo llamará a la función se registró como un callback display (RenderSceneCB) para darnos una chace para renderizar el frame.  
 
-`glClear(GL_COLOR_BUFFER_BIT);`
-`glutSwapBuffers();` 
+```
+glClear(GL_COLOR_BUFFER_BIT);
+glutSwapBuffers(); 
+```
 
 Lo único que hacemos en nuestra función de hacer es limpiar el framebuffer (con el color especificado anteriormente - pruebe a cambiar). La segunda llamada le dice a GLUT que intercambie los roles de backbuffer y frontbuffer. En la siguiente llamada de la función vamos a renderizar el frame en el frontbuffer y se mostrará el backbuffer. 

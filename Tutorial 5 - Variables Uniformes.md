@@ -1,3 +1,8 @@
+### Tutorial 5
+## Variables Uniformes
+
+#### English: https://ogldev.org/www/tutorial05/tutorial05.html
+
 ## Background
 En este tutorial encontramos un nuevo tipo de variables de shader - las variables uniformes (uniform variables). La diferencia entre atributos y variables uniformes es que las variables de atributo contienen información que es específica del vértice, por lo que son recargadas con un nuevo valor del vertex buffer por cada invocation del shader, mientras que el valor de las variables uniforme se mantiene constante a través de todo el draw call. Esto significa que cargamos el valor antes de hacer el draw call y posteriormente podemos acceder al mismo valor en cada invocación del vertex shader. Las variables uniformes son útiles para almacenar datos como los parámetros de iluminación (posición de la luz, dirección, etc.), matrices de transformación, manejadores de objetos de textura, y entre otros. 
 

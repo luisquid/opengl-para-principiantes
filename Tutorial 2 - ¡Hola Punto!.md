@@ -1,3 +1,8 @@
+### Tutorial 2
+## ¡Hola Punto!
+
+#### English: https://ogldev.org/www/tutorial02/tutorial02.html
+
 ## Contexto
 Este es nuestro primer encuentro con GLEW, la Librería de Extension Wrangler de OpenGL. GLEW nos ayuda con el dolor de cabeza que puede ser el manejo de extensiones en OpenGL. Una vez inicializado consulta todas las extensiones disponibles en tu plataforma, las carga dinámicamente y te da acceso fácil a ellas usando un solo archivo header. 
 

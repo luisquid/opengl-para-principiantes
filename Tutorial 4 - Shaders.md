@@ -1,3 +1,8 @@
+### Tutorial 4
+## Shaders
+
+#### English: https://ogldev.org/www/tutorial04/tutorial04.html
+
 ## Contexto
 De este tutorial en adelante cada efecto y técnica que implmentaremos se realizará utilizando shaders. Los shaders son la forma moderna de hacer gráficos en 3D. De cierta forma podríamos decir que es dar un paso atrás ya que la mayoría de la funcionalidad 3D que se nos dió por las funciones fijas del pipeline y que requerían que el desarrollador solo especificara parametros de configuración (atributos de luz, valores de rotación, etc.) debe ahora ser implementado por el desarrollador (a través de shaders), sin embargo, esto nos permite tener más flexibilidad con nuestro programa y la capacidad de implementar elementos más inovadores. 
 

@@ -1,4 +1,9 @@
-## Telon de fondo 
+### Tutorial 1
+## Abrir una Ventana
+
+#### English: https://ogldev.org/www/tutorial01/tutorial01.html
+
+## Contexto
 
 El espectro de OpenGL no especifica ninguna API para crear y manipular ventanas. Sistemas de ventanas modernas que soportan OpenGL incluyen un sub-sistema que proporciona la unión entre un contexto OpenGL y el sistema de ventanas. En el sistema X Window la interfaz se llama GLX. Microsoft proporciona WGL (pronunciado: Wiggle) para Windows y MacOS tiene CGL. Al trabajar directamente con estas interfaces con el fin de crear una ventana en la que mostrar gráficos suele ser un trabajo duro y por eso utilizamos una biblioteca de alto nivel que abstrae los detalles finos. La biblioteca que usamos aquí se llama la 'OpenGL utility library', o GLUT. Proporciona una API simplificada para la gestión de ventanas, así como la gestión de eventos, control IO y algunos otros servicios. Además, GLUT es multiplataforma de modo que hace más fácil portabilidad. Alternativas a GLUT incluyen SDL y GLFW.  
 

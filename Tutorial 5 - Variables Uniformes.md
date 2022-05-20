@@ -3,12 +3,12 @@
 
 #### English: https://ogldev.org/www/tutorial05/tutorial05.html
 
-## Background
+## Contexto
 En este tutorial encontramos un nuevo tipo de variables de shader - las variables uniformes (uniform variables). La diferencia entre atributos y variables uniformes es que las variables de atributo contienen información que es específica del vértice, por lo que son recargadas con un nuevo valor del vertex buffer por cada invocation del shader, mientras que el valor de las variables uniforme se mantiene constante a través de todo el draw call. Esto significa que cargamos el valor antes de hacer el draw call y posteriormente podemos acceder al mismo valor en cada invocación del vertex shader. Las variables uniformes son útiles para almacenar datos como los parámetros de iluminación (posición de la luz, dirección, etc.), matrices de transformación, manejadores de objetos de textura, y entre otros. 
 
 En este tutorial finalmente haremos que algo se mueva en pantalla. Lo haremos usando una variable uniforme cuyo valor será modificado cada frame, y la función de retorno idle que encontramos en GLUT. El punto de hacer esto es que GLUT no haga una llamdada a nuestra función de retorno del renderizado repetidamente - a menos que tenga que hacerlo. GLUT tiene una llamada a la función de retorno del renderizado después de eventos como el minimizado y maximizado de la ventana o sobreponemos otra ventana sobre la de nuestro programa. Si no cambiamos nada en el acomodo de nuestras ventanas a la hora de lanzar nuestra aplicación, entonces al función de retorno del renderizado se llamara solo una vez. Podemos verlo por nosotros mismos agregando una llamada a printf en la función de renderizado. Veremos que la función solamente es llamada una vez y veremos que se llama cada que minimizamos y maximizamos la ventana. Registrar nuestra función de retorno de renderizado en GLUT en los tutoriales pasados ha estado bien, pero aquí lo que buscamos es que el valor de nuestra variable sea modificado repetidamente. Podremos hacer esto registrando una función de retorno idle. La función idle es llamada por GLUT cuando no se reciben eventos del sistema de ventanas. Podemos tener una función dedicada para esta función de retorno donde podremos organizar elementos de nuestro programa como el tiempo de actualizado o simplemente registrar la función de retorno de renderizado como una función idle también. En este tutorial haremos lo segundo y actualizaremos la variable dentro de nuestra función de renderizado. 
 
-## Source walkthru
+## El Código Paso a Paso
 
 ```
 glutPostRedisplay();

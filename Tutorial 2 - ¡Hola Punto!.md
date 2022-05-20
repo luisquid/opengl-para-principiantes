@@ -16,7 +16,7 @@ Para instalar GLEW: GLEW está disponible en su página principal: http://glew.s
 Aquí incluiremos el haeder de GLEW. Si incluyes otros headers de OpenGL debes tener cuidado de incluir este archivo antes de los demás o podrías tener problemas de compatibilidad. Para poder enlazar la aplicación con GLEW necesitamos '-lGLEW' al makefile. 
 
 `#include "math_3d.h"`
-Este archivo header está ubicado en 'ogldev/Include' y contiene las estructuras de ayuda como la estructura de vector. Expandiremos más el contenido de este header conforme vayamos avanzando en los tutoriales. Hay que asegurarnos de clonar el código fuente del repositorio de acuerdo a las instrucciones especificadas aquí. Considera también que cada carpeta de tutorial contiene un scrip llamado 'build.sh' que puede ser usado para compilar el tutorial. Si usas tu propio sistema de compilado usa ese script como referencia para las banderas de compilado/linker necesarias. 
+Este archivo header está ubicado en 'ogldev/Include' y contiene las estructuras de ayuda como la estructura de vector. Expandiremos más el contenido de este header conforme vayamos avanzando en los tutoriales. Hay que asegurarnos de clonar el código fuente del repositorio de acuerdo a las instrucciones que podemos encontrar [aquí](https://ogldev.org/instructions.html). Considera también que cada carpeta de tutorial contiene un scrip llamado 'build.sh' que puede ser usado para compilar el tutorial. Si usas tu propio sistema de compilado usa ese script como referencia para las banderas de compilado/linker necesarias. 
 
 ```
 GLenum res = glewInit();

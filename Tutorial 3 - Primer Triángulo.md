@@ -17,6 +17,7 @@ Vertices[2] = Vector3f(0.0f, 1.0f, 0.0f);
 Extendimos el arreglo para que contenga tres vértices. 
 
 `glDrawArrays(GL_TRIANGLES, 0, 3);`
+
 Realizamos dos cambios a la función de dibujado: dibujamos triángulos en vez de puntos y dibujamos 3 vértices en vez de 1. 
 
 Para más información sobre este tema puedes revisar el siguiente [video tutorial por Frahaan Hussain](https://www.youtube.com/watch?v=EIpxcNl2WJU&list=PLRtjMdoYXLf6zUMDJVRZYV-6g6n62vet8&index=8). 

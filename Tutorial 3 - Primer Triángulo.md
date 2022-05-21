@@ -6,7 +6,7 @@
 ## Contexto
 Este tutorial es bastante corto. Simplemente expandiremos el tutorial anterior para poder dibujar un triángulo. 
 
-En este tutorial nos apoyaremos en la caja normalizada de nuevo. Los vértices visibles deben estar dentro de la caja para que la transformación de la vista pueda mapearlas a las coordenadas visibles de la ventana. Cuando vemos hacia bajo en el axis negativo de Z la caja se ve de esta forma: 
+En este tutorial nos apoyaremos en la caja normalizada de nuevo. Los vértices visibles deben estar dentro de la caja para que la transformación de la vista pueda mapearlas a las coordenadas visibles de la ventana. Cuando vemos hacia bajo en el ejes negativo de Z la caja se ve de esta forma: 
 
 Punto (-1.0, -1.0) se mapea al lado inferior izquierdo de la ventana, (-1.0, 1.0) se mapea en la parte superior izquierda, y así sucesivamente. Si extiendes la posición de uno de los vértices fuera de esta caja el triángulo se vería cortado y solo podríamos ver parte de este mismo. 
 

@@ -18,8 +18,7 @@ Queremos modificar la identidad de la matriz para que el resultado sea:
 
 No hay una forma sencilla de hacer esto si metemos una matriz de 3x3, pero si cambiamos a un matriz de 4x4 podemos hacer lo siguiente:
 
-
-Representing a 3-vector using a 4-vector like that is called homogenous coordinates and is very popular and useful for 3D graphics. The fourth component is called 'w'. In fact, the internal shader symbol gl_Position that we have seen in the previous tutorial is a 4-vector and the w component has a very important role for making the projection from 3D to 2D. The common notation is to use w=1 for points and w=0 for vectors. The reason is that points can be translated but vectors cannot. You can change the length of a vector or its direction but all vectors with the same length/direction are considered equal, regardless their "starting position". So you can simply use the origin for all vectors. Setting w=0 and multiplying the translation matrix by the vector will result in the same vector.
+Representando a un vector3 usando a un vector4 de esta forma se le llaman coordenadas homogeneas y es algo muy popular y útil a la hora de trabajar con gráficos en 3D. El cuarto componente del vector se llama 'w'. De hecho, el símbolo interno del shader gl_Position que hemos visto en tutoriales pasados es un vector4, y el componente w tiene un rol muy importante para hacer la proyección de 3D a 2D. La notación común es usar w=1 para puntos y w=0 para vectores. La razón detrás de esto es que los puntos pueden trasladarse, pero los vectores no. Puedes cambiar la longitud deun vector o su dirección, pero todos los vectores que tienen la misma longitud/dirección son considerados iguales, independientemente de su "posición inicial". Así que podemos usar simplemente el origen de todos los vectores. Si asignamos w=0 y multiplicamos la matriz de transformación por el vector nos dará como resultado el mismo vector. 
 
 ## El Código Paso a Paso
 
@@ -46,7 +45,7 @@ En la función de renderizado prepararemos una matriz de 4x4 y la llenaremos de 
 
 `glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, &World.m[0][0]);`
 
-This is another example of a glUniform* function to load data into uniform shader variables. This specific function loads 4x4 matrices and there are also versions for 2x2, 3x3, 3x2, 2x4, 4x2, 3x4 and 4x3. The first parameter is the location of the uniform variable (retrieved after shader compilation using glGetUniformLocation()). The second parameter indicates the number of matrices we are updating. We use 1 for one matrix but we can also use this function to update multiply matrices in one call. The third parameter often confuses newcomers. It indicates whether the matrix is supplied in row-major or column-major order. Row-major means the matrix is supplied row after row, starting from the top. Column-major is the same but in columns. The point is that C/C++ are row-major languages by default. This means that when you populate a two dimentional array with values they are laid out in memory row after row with the "top" row at the lower address. For example, see the following array:
+Este es otro ejemplo de una función glUniform* que carga la información en una variable uniforme de shader. Esta función en particular carga matrices 4x4, pero también hay versiones para 2x2, 3x3, 3x2, 2x4, 4x2, 3x4 y 4x3. El primer parámetro es la ubicación de la variable uniforme (que llega después de la compilación del shader usando glGetUniformLocation()). El segundo parámetro indica el número de matrices que serán actualizadas. Usamos 1 para una matriz, pero también podemos usar esta función para actualizar y multiplicar las matrices en una sola llamada. El tercer parámetro suele confundir a personas que a penas comienzan a aprender OpenGL. Indica si el orden de la matriz es de tipo ascendente en filas o ascendente en columnas. Ascendente en filas significa que la matriz se ingresa fila por fila, empezando por la parte superior de la matriz. Ascendente en columnas es lo mismo que lo anterior pero en columnas. El punto de esto es que C/C++ son lenguajes que usan el orden ascendente en filas por defecto. Esto significa que cuando llenamos un arreglo de dos dimensiones con valores, estos se almacenarán en memoria fila por fila teniendo la primer fila en la dirección de memoria más baja. Por ejemplo, veamos el siguiente arreglo: 
 
 ```
 int a[2][3];
@@ -73,7 +72,7 @@ El código restante es código de shader.
 
 `uniform mat4 gWorld;`
 
-This is a uniform variable of a 4x4 matrix. mat2 and mat3 are also available.
+Esta es una variable uniforme de una matriz de 4x2. mat2 y mat3 también son tipos de matrices disponibles.
 
 `gl_Position = gWorld * vec4(Position, 1.0);`
 

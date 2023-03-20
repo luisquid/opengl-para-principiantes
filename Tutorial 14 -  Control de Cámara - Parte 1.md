@@ -3,7 +3,7 @@
 
 #### English: https://ogldev.org/www/tutorial14/tutorial14.html
 
-[Click acá](https://youtu.be/ns9eVfHCYdg) para ver el video tutorial hecho por ogldev.
+[Click acá](https://www.youtube.com/watch?v=zUpJ2vx3wes) para ver el video tutorial hecho por ogldev.
 
 ## Contexto
 In the previous tutorial we learned how to position the camera anywhere in the 3D world. The next logical step is to allow the user to control it. Movement will be unrestricted - the user will be able to move in all directions. Controlling the camera will be done using two input devices - the keyboard will control our position and the mouse will change our view target. This is very similar to what most first person shooters are doing. This tutorial will focus on the keyboard and the next one on the mouse.

@@ -3,7 +3,7 @@
 
 #### English: https://ogldev.org/www/tutorial10/tutorial10.html
 
-[Click acá](https://youtu.be/kQOwkG15dYo) para ver el video tutorial hecho por ogldev.
+[Click acá](https://www.youtube.com/watch?v=kQOwkG15dYo) para ver el video tutorial hecho por ogldev.
 
 ## Contexto
 OpenGL provides several draw functions. glDrawArrays() that we have been using until now falls under the category of "ordered draws". This means that the vertex buffer is scanned from the specified offset and every X (1 for points, 2 for lines, etc) vertices a primitive is emitted. This is very simple to use but the downside is if a vertex is part of several primitives then it must be present several times in the vertex buffer. That is, there is no concept of sharing. Sharing is provided by the draw functions that belong to the "indexed draws" category. Here in addition to the vertex buffer there is also an index buffer that contains indices into the vertex buffer. Scanning the index buffer is similar to scanning the vertex buffer - every X indices a primitive is emitted. To exercise sharing you simply repeat the index of the shared vertex several times. Sharing is very important for memory efficiency because most objects are represented by some closed mesh of triangles and most vertices participate in more than one triangle.

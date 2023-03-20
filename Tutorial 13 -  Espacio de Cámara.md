@@ -3,7 +3,8 @@
 
 #### English: https://ogldev.org/www/tutorial13/tutorial13.html
 
-[Click acá](https://youtu.be/ns9eVfHCYdg) para ver el video tutorial hecho por ogldev.
+[Click acá](https://www.youtube.com/watch?v=q5jOLztcvsM) para ver el video tutorial hecho por ogldev.
+
 
 ## Contexto
 In the last several tutorials we saw two types of transformations. The first type were transformations that change the position (translation), orientation (rotation) or size (scaling) of an object. These transformations allow us to place an object anywhere within the 3D world. The second type was the perpsective projection transformation that takes the position of a vertex in the 3D world and projects it into a 2D world (i.e. a plane). Once the coordinates are in 2D it is very easy to map them to screen space coordinates. These coordinates are used to actually rasterize the primitives from which the object is composed (be it points, lines or triangles).

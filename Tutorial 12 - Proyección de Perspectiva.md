@@ -3,7 +3,7 @@
 
 #### English: https://ogldev.org/www/tutorial12/tutorial12.html
 
-[Click acá](https://youtu.be/bjGJHq3hgi4) para ver el video tutorial hecho por ogldev.
+[Click acá](https://www.youtube.com/watch?v=LhQ85bPCAJ8) para ver parte 1 del video tutorial hecho por ogldev y [click acá](https://www.youtube.com/watch?v=md3jFANT3UM) para ver la parte 2.
 
 ## Contexto
 We have finally reached the item that represents 3D graphics best - the projection from the 3D world on a 2D plane while maintaining the appearance of depth. A good example is a picture of a road or railway-tracks that seem to converge down to a single point far away in the horizon.

@@ -3,7 +3,7 @@
 
 #### English: https://ogldev.org/www/tutorial15/tutorial15.html
 
-[Click acá](https://youtu.be/ns9eVfHCYdg) para ver el video tutorial hecho por ogldev.
+[Click acá](https://youtu.be/MZuYmG1GBFk) para ver el video tutorial hecho por ogldev.
 
 ## Contexto
 In this tutorial we complete the implementation of the camera by enabling direction control using the mouse. There are various levels of freedom which are associated with the design of the camera. We are going to enable the level of control you come to expect in a first person game (shooter or otherwise). This means we will be able to turn the camera 360 degrees (around the positive Y axis), which corresponds to turning your head left or right and completing a full circle with your body. In addition, we will be able to tilt the camera up and down to get a better view above or below. We won't be able to turn the camera up until we complete a full circle or tilt it in a way a plane fuselage tilts during a turn. These levels of freedom are in the domain of flight simulators which is out of scope for this tutorial. At any rate, we will have a camera that will allow us to conveniently explore the 3D world will are going to develop in the coming tutorials.
